@@ -28,7 +28,7 @@ Follow the steps below to set up and run the project:
 4. **Open a web browser and go to http://localhost:4200 to view the frontend.**
 
 ## Usage
-- Access the backend APIs through http://localhost:5230 (or as configured).
+- Access the backend APIs through http://localhost:5230/api/Country .
 
 ## Additional Information
 - Ensure that you have the latest versions of VSC, VC, Node.js, .NET Core SDK, and Angular CLI installed on your system.
