@@ -1,0 +1,19 @@
+<img src="{{selectedCountryData$?.flags?.png}}" alt="{{selectedCountryData$?.flags?.alt}}">
+<form [formGroup]="countryDetailsForm" (ngSubmit)="onSubmit()" class="form-container" >
+  <ng-container *ngFor="let field of fields">
+    <mat-form-field>
+      <mat-label>{{ field.label }}</mat-label>
+      <input matInput formControlName="{{ field.key }}"  readonly="{{field.readOnly ?? false}}" type="{{field.type ?? 'string'}}">
+      <mat-error *ngIf="countryDetailsForm.get(field.key)?.invalid && countryDetailsForm.get(field.key)?.touched">
+       {{ getErrorMsg(field.key) }}
+      </mat-error>
+
+    </mat-form-field>
+  </ng-container>
+  <button mat-raised-button color="primary" type="submit">Submit</button>
+</form>
+
+
+
+
+
